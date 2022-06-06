@@ -10,6 +10,7 @@ public class Driver {
         //Player player = new Player(music);
         Player player = context.getBean("playerBean", Player.class);
         player.play();
+        System.out.println("Volume "+player.getVolume());
         context.close();
     }
 }
