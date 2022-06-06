@@ -8,9 +8,10 @@ public class Driver {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         //Music music = context.getBean("musicBean", Music.class);
         //Player player = new Player(music);
-        Player player = context.getBean("playerBean", Player.class);
-        player.play();
-        System.out.println("Volume "+player.getVolume());
+        Player player = context.getBean("ListPlayerBean", Player.class);
+        //player.play();
+        player.playList();
+        //System.out.println("Volume "+player.getVolume());
         context.close();
     }
 }
