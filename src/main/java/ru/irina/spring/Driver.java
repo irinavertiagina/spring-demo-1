@@ -6,8 +6,10 @@ public class Driver {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-        TestBean myBean =
-                context.getBean("testBean", TestBean.class);
-        System.out.println(myBean.getName());
+        Music music = context.getBean("musicBean", Music.class);
+
+       Player player = new Player(music);
+        player.play();
+        context.close();
     }
 }

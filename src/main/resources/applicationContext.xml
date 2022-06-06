@@ -7,9 +7,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean"
-          class="ru.irina.spring.TestBean">
-        <constructor-arg value="Higgs"/>
+    <bean id="musicBean"
+          class="ru.irina.spring.ClassicalMusic">
     </bean>
 
 </beans>
