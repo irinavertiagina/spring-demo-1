@@ -14,7 +14,11 @@
           class="ru.irina.spring.ClassicalMusic">
     </bean>
     <bean id="BlackMusicBean"
-          class="ru.irina.spring.BlackMusic">
+          class="ru.irina.spring.BlackMusic"
+    init-method="doInit"
+    destroy-method="doDestroy"
+    scope="prototype">
+
     </bean>
 <!--    <bean id="playerBean"-->
 <!--               class="ru.irina.spring.Player">-->
