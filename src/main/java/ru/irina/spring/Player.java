@@ -1,8 +1,10 @@
 package ru.irina.spring;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class Player {
     Music music;
     List<Music> musicList = new ArrayList<>();

@@ -6,35 +6,5 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <bean id="rockMusicBean"
-          class="ru.irina.spring.RockMusic">
-    </bean>
-    <bean id="classicalMusicBean"
-          class="ru.irina.spring.ClassicalMusic">
-    </bean>
-    <bean id="BlackMusicBean"
-          class="ru.irina.spring.BlackMusic"
-    init-method="doInit"
-    destroy-method="doDestroy"
-    scope="prototype">
-
-    </bean>
-<!--    <bean id="playerBean"-->
-<!--               class="ru.irina.spring.Player">-->
-<!--&lt;!&ndash;             <constructor-arg ref="musicBean"/>&ndash;&gt;-->
-<!--        <property name="music" ref="musicBean"/>-->
-<!--        <property name="name" value="my playlist - yoga"/>-->
-<!--        <property name="volume" value="50"/>-->
-<!--         </bean>-->
-
-    <bean id="ListPlayerBean" class="ru.irina.spring.Player">
-        <constructor-arg>
-            <list>
-                <ref bean="rockMusicBean"/>
-                <ref bean="classicalMusicBean"/>
-                <ref bean="BlackMusicBean"/>
-            </list>
-        </constructor-arg>
-    </bean>
+    <context:component-scan base-package="ru.irina.spring"/>
     </beans>
