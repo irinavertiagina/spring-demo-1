@@ -1,5 +1,6 @@
 package ru.irina.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ public class Player {
     String name;
     int volume;
     //IoC
+    @Autowired
     Player(Music music){
         this.music = music;
     }
