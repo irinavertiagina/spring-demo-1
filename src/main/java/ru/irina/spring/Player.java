@@ -1,6 +1,7 @@
 package ru.irina.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -9,7 +10,10 @@ import java.util.List;
 public class Player {
     Music music;
     List<Music> musicList = new ArrayList<>();
+    @Value("${props.name}")
     String name;
+
+   @Value("${props.value}")
     int volume;
     //IoC
     @Autowired
@@ -38,12 +42,12 @@ public class Player {
         this.volume = volume;
     }
 
-    public String getName() {
-        return name;
+    public void getName() {
+        System.out.println(name);
     }
 
-    public int getVolume() {
-        return volume;
+    public void getVolume() {
+        System.out.println(volume);
     }
 
     public void play(){
